@@ -1,5 +1,5 @@
 
-🔥 "Learning Area" Repository 🔥
+🔥 "Learning Area the FerchasDev" Repository 🔥
 
 Welcome to the "Learning Area" repository! Here, I curate all my study
 materials and resources as I dive into various topics spanning programming, 
