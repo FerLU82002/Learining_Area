@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case</title>
+</head>
+<body>
+
+<label for="clima"> 
+        Seleccione el tipo de clima de hoy:  
+    </label>
+    <select id="clima">
+        <option value="">--Haga una eleccion--</option>
+        <option value="sunny">Soleado</option>
+        <option value="rainy">Lluvioso</option>
+        <option value="snowing">Nevando</option>
+        <option value="overcast">Nublado</option>
+    </select>
+<p></p>
+
+<script>
+    let seleccionar = document.querySelector("select");
+    let parrafo = document.querySelector("p");
+
+    seleccionar.addEventListener("change",establecer_clima)
+
+function establecer_clima(){
+    let eleccion = seleccionar.value;
+
+    switch (eleccion) {
+        case "sunny":
+            parrafo.textContent = "El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.";
+            break;
+        case "rainy":
+            parrafo.textContent = "Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.";
+            break;
+        case "snowing":
+            parrafo.textContent = "Está nevando - ¡está congelando! Mejor quédese en casa con una taza de chocolate caliente.";
+            break;
+        case "overcast":
+             parrafo.textContent = "No hay sol, pero tampoco está lloviendo. El cielo está nublado.";   
+            break;
+
+        default:
+            break;
+    }
+}
+    /*switch (expresion) {
+  case choice1:
+    ejecuta este código
+    break;
+
+  case choice2:
+    ejecuta este código
+    break;
+
+  // Se pueden incluir todos los casos que quieras
+
+  default:
+    por si acaso, corre este código
+}*/
+</script>
+</body>
+</html>

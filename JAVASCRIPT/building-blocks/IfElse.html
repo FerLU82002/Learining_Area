@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="clima"> 
+        Seleccione el tipo de clima de hoy:  
+    </label>
+    <select id="clima">
+        <option value="">--Haga una eleccion--</option>
+        <option value="soleado">Soleado</option>
+        <option value="lluvioso">Lluvioso</option>
+        <option value="nevando">Nevando</option>
+        <option value="nublado">Nublado</option>
+    </select>
+<p></p>
+
+<script>
+    let seleccionar = document.querySelector("select");
+    let parrafo = document.querySelector("p");
+
+    seleccionar.addEventListener("change",establecer_clima)
+    
+    function establecer_clima(){
+
+     let eleccion = seleccionar.value;
+      
+     if (eleccion === "soleado ") {
+        parrafo.textContent = "El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.";
+     }else if (eleccion === "lluvioso") 
+     {
+        parrafo.textContent = "Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.";   
+     }else if (eleccion === "nevando") 
+     {
+        parrafo.textContent = "Está nevando - ¡está congelando! Mejor quédese en casa con una taza de chocolate caliente.";
+           
+     }else if (eleccion === "nublado") 
+     {
+        parrafo.textContent = "No hay sol, pero tampoco está lloviendo. El cielo está nublado.";
+
+    }else {
+        parrafo.textContent = "";
+    }
+
+    }
+</script>
+</body>
+</html>
