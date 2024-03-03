@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="theme">Selecciona el tema</label>
+    <select name="" id="theme">
+        <option value="White">Blanco</option>
+        <option value="Black">Negro</option>
+        <option value="Purple">Morado</option>
+        <option value="Yellow">Amarillo</option>
+        <option value="psychedelic">Psco</option>
+    </select>
+
+    <h1>Este es mi sitio web</h1>
+
+    <script>
+        let select = document.querySelector("select");
+        let html   = document.querySelector("html");
+
+        document.body.style.padding = "10px";
+        function update(fondoColor, textoColor) {
+            html.style.backgroundColor = fondoColor;
+            html.style.color = textoColor;
+        }
+       
+        select.onchange = function () {
+            var choise = select.value;
+            switch (choise) {
+            case 'White':
+                    update('white', 'black');
+                    break;
+            case 'Black':
+                    update('black', 'white');
+                    break;
+            
+            case 'Purple':
+                    update('purple', 'white');
+                    break;
+            case 'Yellow':
+                    update('yellow', 'darkgray')
+                    break;
+            case 'psychedelic':
+                    update('lime', 'purple')
+                    break;
+
+            }
+        }
+       /* select.onchange = function(){
+            select.value === "black" ? update("black", "white") : update("white", "black");
+        }*/
+       
+        /*
+        Finalmente, también tenemos un detector de eventos onchange que sirve para ejecutar una función que contiene un operador ternario. Comienza con una condición de prueba — select.value === 'black'. Si esto devuelve true, ejecutamos la función update() con parámetros de blanco y negro, lo que significa que terminamos con un color de fondo negro y un color de texto blanco. Si devuelve false, ejecutamos las función update() con parámetros de blanco y negro, lo que significa que el color del sitio está invertido.
+        */
+
+    </script>
+</body>
+</html>
