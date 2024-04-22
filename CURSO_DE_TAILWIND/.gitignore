@@ -1,0 +1,29 @@
+# Carpeta de dependencias
+/node_modules
+
+# Archivos generados por el compilador de CSS
+/dist
+
+# Archivos generados por el compilador de JavaScript
+/build
+
+# Archivos de caché y registros
+/.cache
+/logs
+
+# Archivos de configuración local
+.env
+
+# Archivos de respaldo y temporales
+*.bak
+*.tmp
+
+# Archivos de IDE
+.idea
+.vscode
+
+# Archivos de compilación de Tailwind CSS
+.tailwind
+
+# Archivos de respaldo de editor de texto
+*~
